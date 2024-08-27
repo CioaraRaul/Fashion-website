@@ -10,14 +10,17 @@ import { Link } from 'react-router-dom';
 export const BackgroundText = () => {
 
 const today = new Date()
-  
+let today_day;
+let today_month;
+let today_name_month
+
 useEffect(()=>{ 
-    const today_day = today.getDate() // return day of the month
+    today_day = today.getDate() // return day of the month
     console.log(today_day)
-    const today_month = today.getMonth() + 1
+    today_month = today.getMonth() + 1
     console.log(today_month)
   
-    const today_name_month = today.toLocaleString('default', {month:'short'})
+    today_name_month = today.toLocaleString('default', {month:'short'})
     console.log(today_name_month)
   },[today])
   
